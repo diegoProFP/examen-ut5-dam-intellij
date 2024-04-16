@@ -1,8 +1,5 @@
-package torneo.base;
+package torneo.libertobaltasar1;
 
-/**
- * Clase que se corresponde con el jugador
- */
 public class Jugador {
     private String nombre;
     private String deporte;

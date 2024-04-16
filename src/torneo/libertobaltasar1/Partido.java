@@ -1,10 +1,7 @@
-package torneo.base;
+package torneo.libertobaltasar1;
 
 import java.util.Date;
 
-/**
- * Clase que
- */
 public class Partido {
     private String equipoLocal;
     private String equipoVisitante;
