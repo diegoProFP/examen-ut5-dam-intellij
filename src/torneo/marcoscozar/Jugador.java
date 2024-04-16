@@ -1,4 +1,4 @@
-package torneo.diegodi1;
+package torneo.marcoscozar;
 
 public class Jugador {
     private String nombre;

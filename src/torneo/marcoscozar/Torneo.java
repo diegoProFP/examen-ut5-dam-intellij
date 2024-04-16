@@ -1,4 +1,4 @@
-package torneo.diegodi1;
+package torneo.marcoscozar;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,14 +8,14 @@ import java.util.List;
 //Poner comentario de la clase, con la descripción de qué es lo que hace  
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5, y existe desde la 1.0
+/**
+ * Esta clase se utiliza para revistar información sobre los torneos y sus partidos. Utiliza métodos de las demás clases para agregar, encontrar partidos
+ * o incluso revisar y cambiar sus nombres.
+ * @author marcos.cozar@educa.madrid.org
+ * @version 1.5
+ * @since 1.0
+ */
 public class Torneo {
-    /**
-     * Esta clase se utiliza para revistar información sobre los torneos y sus partidos. Utiliza métodos de las demás clases para agregar, encontrar partidos
-     * o incluso revisar y cambiar sus nombres.
-     * @author marcos.cozar@educa.madrid.org
-     * @version 1.5
-     * @since 1.0
-     */
 
     private String nombre;
     private List<Partido> partidos = new ArrayList<>();

@@ -1,5 +1,8 @@
 package torneo.diegodi1;
 
+import torneo.marcoscozar.DatosInvalidosException;
+import torneo.marcoscozar.Partido;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,12 +14,12 @@ import java.util.List;
 public class Torneo {
 	
     private String nombre;
-    private List<Partido> partidos = new ArrayList<>();
+    private List<torneo.marcoscozar.Partido> partidos = new ArrayList<>();
 
     // Poner descripcion, parametros de entrada, valor de retorno, y en qué condiciones se produce la excepción. Además que pueda
  	// referenciar tanto a las clases Partido y DatosInvalidosException
  	//Existe desde la version 1.0
-    public boolean agregarPartido(Partido nuevo) throws DatosInvalidosException {
+    public boolean agregarPartido(torneo.marcoscozar.Partido nuevo) throws torneo.marcoscozar.DatosInvalidosException {
         if (nuevo == null || nuevo.getEquipoLocal() == null || nuevo.getEquipoVisitante() == null) {
             throw new DatosInvalidosException("El partido o alguno de los equipos es nulo");
         }
@@ -32,7 +35,7 @@ public class Torneo {
     // Poner descripcion, parametros de entrada, valor de retorno.
    	//Existe desde la version 1.0
     public boolean encontrarPartidoPorEquipos(String local, String visitante) {
-        for (Partido partido : partidos) {
+        for (torneo.marcoscozar.Partido partido : partidos) {
             if (partido.getEquipoLocal().equalsIgnoreCase(local) && partido.getEquipoVisitante().equalsIgnoreCase(visitante)) {
                 return true;
             }
@@ -44,7 +47,7 @@ public class Torneo {
    	// encontrarPartidos(Date fecha, String equipoLocal, String equipoVisitante)
    	//Existe desde la version 1.2
     public boolean encontrarPartidoPorFecha(Date fecha) {
-        for (Partido partido : partidos) {
+        for (torneo.marcoscozar.Partido partido : partidos) {
             if (partido.getFechaPartido().equals(fecha)) {
                 return true;
             }
@@ -54,9 +57,9 @@ public class Torneo {
 
     // Poner descripcion, parametros de entrada, valor de retorno.
  	//Existe desde la version 1.5
-    public List<Partido> encontrarPartidos(Date fecha, String equipoLocal, String equipoVisitante) {
-        List<Partido> resultados = new ArrayList<>();
-        for (Partido partido : partidos) {
+    public List<torneo.marcoscozar.Partido> encontrarPartidos(Date fecha, String equipoLocal, String equipoVisitante) {
+        List<torneo.marcoscozar.Partido> resultados = new ArrayList<>();
+        for (torneo.marcoscozar.Partido partido : partidos) {
             if (partido.getFechaPartido().equals(fecha) &&
                 partido.getEquipoLocal().equalsIgnoreCase(equipoLocal) &&
                 partido.getEquipoVisitante().equalsIgnoreCase(equipoVisitante)) {
@@ -74,7 +77,7 @@ public class Torneo {
         this.nombre = nombre;
     }
 
-    public List<Partido> getPartidos() {
+    public List<torneo.marcoscozar.Partido> getPartidos() {
         return partidos;
     }
 
