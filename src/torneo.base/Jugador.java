@@ -1,5 +1,8 @@
 package torneo.base;
 
+/**
+ * Clase que se corresponde con el jugador
+ */
 public class Jugador {
     private String nombre;
     private String deporte;

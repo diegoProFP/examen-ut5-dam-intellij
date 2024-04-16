@@ -2,6 +2,9 @@ package torneo.base;
 
 import java.util.Date;
 
+/**
+ * Clase que
+ */
 public class Partido {
     private String equipoLocal;
     private String equipoVisitante;
